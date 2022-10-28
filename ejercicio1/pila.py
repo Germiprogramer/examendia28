@@ -37,7 +37,7 @@ def pasar_elemento(pila_pasa, pila_recibe):
     apilar(pila_recibe, elemento_pasar)
 
 def condicion_hanoi(pila_pasa, pila_recibe):
-    if pila_pasa.superior < pila_recibe.superior:
+    if pila_pasa.superior.info < pila_recibe.superior.info:
         pasar_elemento(pila_pasa, pila_recibe)
     
 def imprimir(pila):

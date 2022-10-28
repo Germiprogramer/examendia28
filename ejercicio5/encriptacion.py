@@ -4,7 +4,7 @@ def encriptacion(mensaje):
     #retornará un lista de caracteres troceada, que nos sera util para luego aplicar las tablas hash
     
     lista = []
-    encriptado = hashlib.sha256([b] mensaje).hexdigest()
+    encriptado = hashlib.sha256(b"").hexdigest()
     longitud = len(encriptado)
     
     #tocho
