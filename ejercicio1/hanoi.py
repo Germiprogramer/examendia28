@@ -30,7 +30,10 @@ def hanoi(pila1, pila2, pila3):
                         try:
                             condicion_hanoi(pila3, pila1)
                         except:
-                            break
-    return imprimir(pila1), imprimir(pila2), imprimir(pila3)
+                            pass
+    else:               
+        return imprimir(pila1), imprimir(pila2), imprimir(pila3)
 
 hanoi(pila4, pila5, pila6)
+
+imprimir(pila4)
