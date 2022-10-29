@@ -12,7 +12,7 @@ class Pila:
         self.tamanio = 0
 
 def apilar(pila,dato):
-        print("Agregando {} en la cima de la pila".format(dato))
+        
         #Si no hay dato, agregamos el valor del elemento superior y desapilamos
         if pila.superior == None:
             pila.superior = Nodo(dato)
@@ -27,7 +27,7 @@ def desapilar(pila):
         if pila.superior == None:
             print("No hay ningún elemento en la cola")
             return
-        print("Desapilar {}".format(pila.superior.info))
+        
         pila.superior = pila.superior.sig
         pila.tamanio -=1
 

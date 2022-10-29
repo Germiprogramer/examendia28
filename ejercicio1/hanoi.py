@@ -1,4 +1,5 @@
-from pila import Pila, apilar, desapilar
+
+from pila import Pila, apilar, desapilar, imprimir, pasar_elemento
 
 
 pila1 = Pila()
@@ -14,10 +15,12 @@ def torre_de_hanoi(n, pila1, pila2, pila3):
     if n==1:
         return 
     torre_de_hanoi(n-1, pila1, pila3, pila2)
-    apilar(pila1,(desapilar(pila3)))
+    pasar_elemento(pila1, pila2)
     torre_de_hanoi(n-1, pila3, pila2, pila1)
 
 def hanoi_completo(n, pila1, pila2, pila3):
     apilar_primera_torre(pila1, n)
     torre_de_hanoi(n, pila1, pila2, pila3)
+
+
 
