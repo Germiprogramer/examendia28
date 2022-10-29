@@ -32,9 +32,7 @@ def desapilar(pila):
         pila.tamanio -=1
 
 def pasar_elemento(pila_pasa, pila_recibe):
-    elemento_pasar = pila_pasa.superior.info
-    desapilar(pila_pasa)
-    apilar(pila_recibe, elemento_pasar)
+    apilar(pila_recibe,(desapilar(pila_pasa)))
 
 def condicion_hanoi(pila_pasa, pila_recibe):
     if pila_pasa.superior.info < pila_recibe.superior.info:

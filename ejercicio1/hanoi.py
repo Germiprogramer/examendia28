@@ -1,39 +1,23 @@
-from pila import Pila, apilar, imprimir, condicion_hanoi
+from pila import Pila, apilar, desapilar
 
 
-pila4 = Pila()
-pila5 = Pila()
-pila6 = Pila()
+pila1 = Pila()
+pila2 = Pila()
+pila3 = Pila()
 
-apilar(pila5, 10)
-apilar(pila6,10)
+def apilar_primera_torre(pila1, n):
+    for i in range(n+1):
+        apilar(pila1,i)
 
-for i in range(4+1):
-    apilar(pila4,i)
-imprimir(pila4)
 
-def hanoi(pila1, pila2, pila3):
-    while True:
-        try:
-            condicion_hanoi(pila1,pila2)
-        except:
-            try:
-                condicion_hanoi(pila1, pila3)
-            except:
-                try:
-                    condicion_hanoi(pila2, pila3)
-                except:
-                    try:
-                        condicion_hanoi(pila1, pila2)
-                        imprimir(pila1)
-                    except:
-                        try:
-                            condicion_hanoi(pila3, pila1)
-                        except:
-                            pass
-    else:               
-        return imprimir(pila1), imprimir(pila2), imprimir(pila3)
+def torre_de_hanoi(n, pila1, pila2, pila3):
+    if n==1:
+        return 
+    torre_de_hanoi(n-1, pila1, pila3, pila2)
+    apilar(pila1,(desapilar(pila3)))
+    torre_de_hanoi(n-1, pila3, pila2, pila1)
 
-hanoi(pila4, pila5, pila6)
+def hanoi_completo(n, pila1, pila2, pila3):
+    apilar_primera_torre(pila1, n)
+    torre_de_hanoi(n, pila1, pila2, pila3)
 
-imprimir(pila4)
