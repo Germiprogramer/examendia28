@@ -19,6 +19,7 @@ def agregar_termino(polinomio, termino, valor):
     aux = Nodo()
     dato = datoPolinomio(valor,termino)
     aux.info = dato
+    #para que el que tenga mayor grado este primero
     if (termino > polinomio.grado):
         aux.sig = polinomio.termino_mayor
         polinomio.termino_mayor = aux
@@ -51,7 +52,7 @@ def mostrar(polinomio):
     #muestra el polinomio
     aux = polinomio.termino_mayor
     pol = ""
-    if (aux is not None):
+    while (aux is not None):
         signo = ""
         if (aux.info.valor >= 0):
             signo += "+"
@@ -119,11 +120,30 @@ def dividir(polinomio1, polinomio2):
         pol1 = pol1.sig
     return paux
 
-def eliminar():
-    pass
+def eliminar(polinomio, termino):
+    aux = polinomio.termino_mayor
+    while(aux is not None and aux.info.termino != termino):
+        aux = aux.sig
+        if (aux.sig is not None and aux.sig.info.termino == termino):
+            aux.sig.info = 0
+            aux.sig = aux.sig.sig
+            print("Eliminado")
+            break
+        
 
-def determinar_grado():
-    pass
+def determinar(polinomio, termino):
+    aux = polinomio.termino_mayor
+    while aux is not None:
+        
+        if (aux is not None and aux.info.termino == termino):
+            return aux.info.termino
+        elif aux == None:
+            return 0
+        else:
+            aux = aux.sig
+        
+
+    
 
 
 
@@ -132,7 +152,15 @@ dosx = Polinomio()
 xcuadrado = Polinomio()
 agregar_termino(xcuadrado, 2, 1)
 agregar_termino(dosx, 1, 2)
-print(mostrar(dosx))
-nuevo_pol = dividir(dosx, xcuadrado)
+
+nuevo_pol = dividir(xcuadrado, dosx)
+
+
+agregar_termino(nuevo_pol, 1, 2)
+agregar_termino(nuevo_pol, 2,1)
+print(nuevo_pol.grado)
 print(mostrar(nuevo_pol))
+eliminar(nuevo_pol, 1)
+print(mostrar(nuevo_pol))
+print(determinar(nuevo_pol, 3))
 
