@@ -1,5 +1,6 @@
-from encriptacion import encriptacion
-import hash
+from encriptacion import encriptar_string
 
-print(encriptacion("hola"))
+cadena = str(input("Escribe la cadena a encriptar:  "))
+encriptaciones = encriptar_string(cadena)
+print(encriptaciones)
 
