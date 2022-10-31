@@ -1,7 +1,7 @@
-nombre; largo; tripulacion; pasajeros
-Halcón Milenario; 600; 50; 20
-Estrella de la Muerte; 100; 13
-Nave Yoda; 29; 1; 1
-Nave Luke; 31, 10; 10
-Nave Han Solo; 31, 7, 8
+nombre;largo;tripulacion;pasajeros
+Halcon Milenario;600;50;20
+Estrella de la Muerte;100;13;30
+Nave Yoda;29;1;1
+Nave Luke;31,10;10
+Nave Han Solo;25;51;8
 
