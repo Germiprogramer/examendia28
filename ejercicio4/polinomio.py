@@ -119,6 +119,15 @@ def dividir(polinomio1, polinomio2):
         pol1 = pol1.sig
     return paux
 
+def eliminar():
+    pass
+
+def determinar_grado():
+    pass
+
+
+
+
 dosx = Polinomio()
 xcuadrado = Polinomio()
 agregar_termino(xcuadrado, 2, 1)
