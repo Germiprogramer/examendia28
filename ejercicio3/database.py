@@ -33,7 +33,7 @@ print(primeras_letras("ejercicio3/starwars.csv"))
 #______________________________
 #NAVES PUEDEN LLEVAR 6 O MAS PASAJEROS
 
-print(seisomas("ejercicio3/starwars.csv"))
+#print(seisomas("ejercicio3/starwars.csv"))
 
 #______________________________
 #INFORMACION NAVE MAS PEQUEÑA Y MAS GRANDE

@@ -16,8 +16,8 @@ if __name__ == '__main__':
         print("Nave con mas tripulacion : ", nave_mas_tripu(datos))
     elif entrada ==5:
         print("Nave que empiezan por 'At' : ", primeras_letras(datos))
-    elif entrada == 6:
-        print("Naves con 6 o más tripulantes: ", seisomas(datos))
+    #elif entrada == 6:
+        #print("Naves con 6 o más tripulantes: ", seisomas(datos))
     elif entrada == 7:
         print("Nave más pequeña: ", navepeque(datos))
         print("Nave más grande: ", navegrande(datos))

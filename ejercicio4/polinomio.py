@@ -148,19 +148,4 @@ def determinar(polinomio, termino):
 
 
 
-dosx = Polinomio()
-xcuadrado = Polinomio()
-agregar_termino(xcuadrado, 2, 1)
-agregar_termino(dosx, 1, 2)
-
-nuevo_pol = dividir(xcuadrado, dosx)
-
-
-agregar_termino(nuevo_pol, 1, 2)
-agregar_termino(nuevo_pol, 2,1)
-print(nuevo_pol.grado)
-print(mostrar(nuevo_pol))
-eliminar(nuevo_pol, 1)
-print(mostrar(nuevo_pol))
-print(determinar(nuevo_pol, 3))
 
