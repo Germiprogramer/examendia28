@@ -136,6 +136,55 @@ def nave_mas_tripu(dataset):
             respuesta = naves[j]["nombre"]
     return respuesta
 
+def primeras_letras(dataset):
+    naves = crear_dic(dataset)
+    nombres = []
+    for i in range(len(naves)):
+        nombres.append(naves[i]["nombre"])
+    lista = []
+    for i in range(len(nombres)):
+        if [nombres[i]][0:2] == "At":
+            lista.append(nombres[i])
+    return lista
+
+def seisomas(data):
+    naves = crear_dic(data)
+    pasajeros = []
+    for i in range(len(naves)):
+        pasajeros.append(naves[i]["pasajeros"])
+
+    filtrado = []
+    for i in range(len(pasajeros)):
+        
+        if int(pasajeros[i]) > 6:
+            filtrado.append(pasajeros[i])
+    n = nombres(filtrado, "pasajeros", naves)
+    return n
+
+def navepeque(data):
+    naves = crear_dic(data)
+    tamanio = []
+    for i in range(len(naves)):
+        tamanio.append(naves[i]["largo"])
+
+    maspeque = tamanio[-1]
+    for j in range(len(naves)):
+        if naves[j]["largo"] == maspeque:
+            respuesta = naves[j]["nombre"]
+    return respuesta
+
+def navegrande(data):
+    naves = crear_dic(data)
+    tamanio = []
+    for i in range(len(naves)):
+        tamanio.append(naves[i]["largo"])
+
+    masgrande = tamanio[-1]
+    for j in range(len(naves)):
+        if naves[j]["largo"] == masgrande:
+            respuesta = naves[j]["nombre"]
+    return respuesta
+
     
     
 
