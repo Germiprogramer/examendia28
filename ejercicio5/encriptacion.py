@@ -1,21 +1,24 @@
 import hashlib
 
-def encriptacion(mensaje):
+
     #retornará un lista de caracteres troceada, que nos sera util para luego aplicar las tablas hash
-    
-    lista = []
-    encriptado = hashlib.sha256(b"").hexdigest()
-    longitud = len(encriptado)
+
+
+lista = []
+encriptado = hashlib.sha256(b"hola").hexdigest()
+longitud = len(encriptado)
+
+print(encriptado)
     
     #tocho
-    lista.append(mensaje[0:longitud//8])
-    lista.append(mensaje[(longitud//8):(longitud//8)*2])
-    lista.append(mensaje[(longitud//8)*2:(longitud//8)*3])
-    lista.append(mensaje[(longitud//8)*3:(longitud//8)*4])
-    lista.append(mensaje[(longitud//8)*4:(longitud//8)*5])
-    lista.append(mensaje[(longitud//8)*5:(longitud//8)*6])
-    lista.append(mensaje[(longitud//8)*6:(longitud//8)*7])
-    lista.append(mensaje[(longitud//8)*7:longitud])
+hashlib.sha256(b"El Libro de Python").hexdigest()
+print(hashlib.sha224(b"El Libro de Python").hexdigest())
+print(hashlib.sha512(b"El Libro de Python").hexdigest())
+print(hashlib.blake2b(b"El Libro de Python").hexdigest())
+print(hashlib.blake2s(b"El Libro de Python").hexdigest())
+print(hashlib.blake2s(b"El Libro de Python").hexdigest())
+print(hashlib.md5(b"El Libro de Python").hexdigest())
 
-    return lista
+print(lista)
+
 
