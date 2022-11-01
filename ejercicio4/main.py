@@ -1,6 +1,7 @@
 from polinomio import Polinomio, agregar_termino, restar, dividir, mostrar, eliminar, determinar
 
 if __name__ == '__main__':
+    
     dosx = Polinomio()
     xcuadrado = Polinomio()
     agregar_termino(xcuadrado, 2, 1)
